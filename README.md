@@ -8,13 +8,13 @@
 #  Installation
 
 ```bash
-$ python setup.py install mydog 
+$ python setup.py install pycheck 
 ```
 
 
 or
 ```bash
-$ python -m pip install mydog
+$ python -m pip install pycheck
 ```
 
 ### Pycheck officially supports Python 2.7 & 3.6+.
