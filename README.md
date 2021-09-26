@@ -51,8 +51,8 @@ Options:
 ```bash
 $ pycheck file.py -o output.txt
 $ cat output.txt
-1 > setup.py:33 error: Argument 1 to "asd" has incompatible type "int"; expected "str"
-Found 2 errors (checked 1 source file)
+1 > setup.py:33 error: Argument 1 to "fun" has incompatible type "int"; expected "str"
+Found 1 errors (checked 1 source file)
 ```
 ## License
 
