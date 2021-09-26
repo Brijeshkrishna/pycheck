@@ -1,5 +1,5 @@
 
-<p style="text-align:center;font-size:100px">Pycheck</p>
+# <p style="text-align:center;font-size:100px">Pycheck</p>
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Python-Version](https://img.shields.io/badge/python-3.9-blue) ![issues](https://img.shields.io/github/issues/Brijeshkrishna/pycheck)  ![License](https://img.shields.io/github/license/brijeshkrishna/pycheck) 
 
