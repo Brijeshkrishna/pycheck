@@ -17,6 +17,11 @@ or
 $ python -m pip install pycheck
 ```
 
+or 
+```bash
+$ pip install git+https://github.com/Brijeshkrishna/pycheck.git#egg=pycheck
+```
+
 ### Pycheck officially supports Python 2.7 & 3.6+.
 
 ## Cloning the repository
