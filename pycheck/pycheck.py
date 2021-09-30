@@ -187,22 +187,31 @@ def style_flake(path, filename_out, ot=0):
 
 
 def ispy(string: str):
-    coom = string.split('.\\')[-1].split('.')[-1] 
-    return 1 if coom == 'py' or coom == '' else 0
+    check = string.split('.\\')[-1].split('.')[-1] 
+    return 1 if check == 'py' or check == '' else 0
 
 
 @ command()
 @ option('-o', help='output file', required=False, type=str)
-@ argument('filename', required=1)
+@ argument('filename', required=0)
 def pycheck(filename, o):
-    if not(ispy(filename)):
-        code = str(input(colored(
-            'It is not a python file Do want to continue (y/n) ', 'blue', attrs=['bold']))).lower()
-        if code == "n":
-            exit()
-        elif code != 'y':
-            print(colored('It will be considered as yes ', 'green')+colored("(", 'blue',
-                  attrs=['bold']) + colored(str(code), 'cyan') + colored(")", 'blue', attrs=['bold']))
+    if filename is None:
+        print('''
+Usage: pycheck [OPTIONS] FILENAME
 
-    style_flake(filename, 0) if o is None else style_flake(
-        filename, filename_out=o, ot=1)
+Options:
+  -o TEXT  output file
+  --help   Show this message and exit.
+''')
+    else:
+        if not(ispy(filename)):
+            code = str(input(colored(
+                'It is not a python file Do want to continue (y/n) ', 'blue', attrs=['bold']))).lower()
+            if code == "n":
+                exit()
+            elif code != 'y':
+                print(colored('It will be considered as yes ', 'green')+colored("(", 'blue',
+                    attrs=['bold']) + colored(str(code), 'cyan') + colored(")", 'blue', attrs=['bold']))
+
+        style_flake(filename, 0) if o is None else style_flake(
+            filename, filename_out=o, ot=1)
