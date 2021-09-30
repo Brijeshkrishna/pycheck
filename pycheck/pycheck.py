@@ -187,7 +187,8 @@ def style_flake(path, filename_out, ot=0):
 
 
 def ispy(string: str):
-    return 1 if string.split('.\\')[-1].split('.')[-1] == 'py' else 0
+    coom = string.split('.\\')[-1].split('.')[-1] 
+    return 1 if coom == 'py' or coom == '' else 0
 
 
 @ command()
